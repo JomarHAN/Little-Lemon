@@ -331,6 +331,11 @@ main{
   align-self: center;
 }
 
+.testimonial__card-rating span{
+  color: var(--primary-color-yellow);
+  margin: 0.1rem;
+}
+
 
 
 @media only screen and (max-width: 1024px){
