@@ -196,6 +196,8 @@ main{
   transform: scale(1.4);
 }
 
+/* SPECIAL SECTION */
+
 .specials-container{
   margin-bottom: 50px;
 }
@@ -209,6 +211,7 @@ main{
   font-size: var(--section-title-fs);
   font-weight: var(--section-title-fw);
   margin: 0;
+  color: var(--primary-color-green);
 }
 .specials-head button{
   height: 50px;
@@ -260,18 +263,18 @@ main{
 }
 .card-header .title{
   margin: 0;
-  font-size: var(--card-title-fs);
+  font-size: 18px;
   font-weight: var(--card-title-fw);
 }
 .card-header .price{
   margin: 0;
   color: #EE9972;
-  font-size: var(--highlight-text-fs);
+  font-size: 18px;
   font-weight: var(--highlight-text-fw);
 }
 .card-details p{
   margin: 0;
-  font-size: var(--paragraph-fs);
+  font-size: 14px;
   font-weight: var(--paragraph-fw);
 }
 
@@ -291,7 +294,7 @@ main{
   font-size: var(--section-title-fs);
   font-weight: var(--section-title-fw);
   margin-top: 0;
-  color: white;
+  color: var(--primary-color-yellow);
 }
 
 .testimonial__card-image{
@@ -336,6 +339,76 @@ main{
   margin: 0.1rem;
 }
 
+/* About Section */
+.about-section{
+  margin: 20px 0;
+  height: 250px;
+}
+.about-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+}
+
+.about__left{
+  display: flex;
+  align-items: center;
+}
+.about__left-container .about__title{
+  font-size: 40px;
+  font-weight: var(--display-title-fw);
+  color: var(--primary-color-green);
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.about__left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.about__left-container h4{
+  font-size: var(--display-subTitle-fs);
+  font-weight: bold;
+  color: var(--primary-color-yellow);
+  margin: 0;
+}
+.about__left-container p{
+  color: var(--highlight-color-black);
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: var(--paragraph-fw);
+}
+
+.about__right{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about__images-box{
+  position: relative;
+  width: 160px;
+  height: 100%;
+}
+
+.about__image-left{
+  bottom: 0px;
+  left: 0px;
+}
+.about__image-right{
+  top: 0px;
+  right: 0px;
+}
+.about__images-box > *{
+  height: 145px;
+  position: absolute;
+  border-radius: 20px;
+}
 
 
 @media only screen and (max-width: 1024px){
@@ -345,7 +418,7 @@ main{
   .specials-container{
     margin-bottom: 30px;
   }
-  .card-header .title, 
+  .card-header .title,
   .card-header .price {
     font-size: 13pt;
   }
