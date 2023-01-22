@@ -2,7 +2,7 @@ import React from 'react'
 
 function SpecialCard({title, image, price, text}) {
   return (
-    <article>
+    <article className='special-card'>
         <div className="card-image">
         <img src={image} alt="" />
         </div>
