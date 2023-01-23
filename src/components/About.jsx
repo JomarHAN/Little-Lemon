@@ -10,7 +10,7 @@ function About() {
           <div className="about__left-container">
             <h2 className="about__title">Little Lemon</h2>
             <h4>Chicago</h4>
-            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing passages.</p>
           </div>
         </div>
         <div className="about__right">
