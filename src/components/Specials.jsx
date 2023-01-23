@@ -7,7 +7,7 @@ function Specials() {
     <div className="specials-container container-row">
         <div className="specials-head">
         <h2>This week specials!</h2>
-        <button>order online</button>
+        <button>online menu</button>
         </div>
         <div className="specials-cards">
             {specials.map(({image, title, price, text}) => (
