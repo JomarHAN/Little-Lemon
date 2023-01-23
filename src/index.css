@@ -412,6 +412,13 @@ main{
   border-radius: 20px;
 }
 
+/* BOOKING SECTION */
+.bookingForm-container{
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
+}
+
 
 @media only screen and (max-width: 1024px){
   .container-row{

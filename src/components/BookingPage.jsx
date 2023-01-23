@@ -3,7 +3,9 @@ import BookingForm from './BookingForm'
 
 function BookingPage() {
   return (
-    <BookingForm/>
+    <div className='bookingPage-section container-row'>
+      <BookingForm/>
+    </div>
   )
 }
 

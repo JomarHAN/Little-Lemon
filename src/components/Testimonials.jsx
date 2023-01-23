@@ -9,7 +9,7 @@ function Testimonials() {
             <h2>Testimonials</h2>
             <div className="testimonial__cards-group">
                 {testimonials.map((customer) => (
-                    <TestimonialCard customer={customer} />
+                    <TestimonialCard customer={customer} key={customer.name} />
                 ))}
 
             </div>
