@@ -1,10 +1,10 @@
 import React from 'react'
 import BookingForm from './BookingForm'
 
-function BookingPage() {
+function BookingPage({state, dispatch}) {
   return (
     <div className='bookingPage-section container-row'>
-      <BookingForm/>
+      <BookingForm state={state} dispatch={dispatch} />
     </div>
   )
 }
