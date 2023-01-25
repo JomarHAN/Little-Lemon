@@ -39,7 +39,7 @@ describe('Form dispatch', () => {
     const mockDispatch = jest.fn()
 
     formReducer(initialState, { type: "booking", payload: dateInput.value }, mockDispatch)
-    expect(mockDispatch).toHaveBeenCalledWith({ type: "booking", payload: "01-25-2025" })
+    expect(mockDispatch).toHaveBeenCalledWith({ type: "booking", payload: "01-25-2023" })
 
 
     // formReducer(initialState, {

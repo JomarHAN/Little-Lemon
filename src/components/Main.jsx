@@ -9,19 +9,20 @@ import Menu from './Menu'
 import OrderOnline from './OrderOnline'
 
 export const initialState = {
-  availableDate: `${new Date().toISOString().split("T")[0]}`,
-  availableTime: "17:00",
-  guests: 1,
-  occasion: "Birthday"
+  pickedDate: '',
+  pickedTime:  '',
+  guests: '',
+  occasion: ""
 }
+
 
 export const formReducer = (state, {type, payload}) => {
   switch(type){
     case "booking":
       return {
         ...state,
-        availableDate: payload.availableDate,
-        availableTime: payload.availableTime,
+        pickedDate: payload.pickedDate,
+        pickedTime: payload.pickedTime,
         guests: payload.guests,
         occasion: payload.occasion
       }
