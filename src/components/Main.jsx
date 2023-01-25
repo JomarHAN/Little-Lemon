@@ -1,5 +1,4 @@
-import React from 'react'
-import { useReducer } from 'react'
+import React, { useState, useReducer } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import About from './About'
 import BookingPage from './BookingPage'
@@ -8,38 +7,29 @@ import Login from './Login'
 import Menu from './Menu'
 import OrderOnline from './OrderOnline'
 
-export const initialState = {
-  pickedDate: '',
-  pickedTime:  '',
-  guests: '',
-  occasion: ""
-}
 
+const initializeTimes = ["17:00","18:00","19:00","20:00"]
 
-export const formReducer = (state, {type, payload}) => {
+const updateTimes = (state, {type, payload}) => {
+  console.log(payload)
   switch(type){
-    case "booking":
-      return {
-        ...state,
-        pickedDate: payload.pickedDate,
-        pickedTime: payload.pickedTime,
-        guests: payload.guests,
-        occasion: payload.occasion
-      }
+    case "updating times":
+      return state
     default:
       return state;
   }
 }
 
 function Main() {
-  const [state, dispatch] = useReducer(formReducer, initialState)
+  const [availableTimes, dispatchUpdateTimes] = useReducer(updateTimes,initializeTimes)
+
   return (
     <main>
       <Routes>
         <Route path='/' element={<Home/>} exact />
         <Route path='/about' element={<About/>} />
         <Route path='/menu' element={<Menu/>} />
-        <Route path='/reservation' element={<BookingPage state={state} dispatch={dispatch} />} />
+        <Route path='/reservation' element={<BookingPage availableTimes={availableTimes} dispatchUpdateTimes={dispatchUpdateTimes} />} />
         <Route path='/order-online' element={<OrderOnline/>} />
         <Route path='/login' element={<Login/>} />
       </Routes>
