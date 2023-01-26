@@ -7,7 +7,7 @@ import { fetchAPI, submitAPI } from '../dateData'
 import ConfirmedBooking from './ConfirmedBooking'
 
 
-const initializeTimes = []
+const initializeTimes = fetchAPI(new Date())
 
 const updateTimes = (state, {type, payload}) => {
   switch(type){
