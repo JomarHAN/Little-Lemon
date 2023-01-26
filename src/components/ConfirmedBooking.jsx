@@ -2,7 +2,7 @@ import React from 'react'
 
 function ConfirmedBooking() {
   return (
-    <div>ConfirmedBooking</div>
+    <div className='container-row'>ConfirmedBooking</div>
   )
 }
 

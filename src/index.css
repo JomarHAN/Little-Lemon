@@ -413,10 +413,78 @@ main{
 }
 
 /* BOOKING SECTION */
+
+.error-message{
+  margin: 0 0 15px 0;
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.error-input{
+  margin: 0!important;
+  border: 1.5px solid red;
+}
+
+.bookingPage-section{
+  padding: 30px;
+}
+
+.booking-title{
+  text-align: center;
+  font-family: var(--display-title-font);
+  font-size: var(--display-title-fs);
+  font-weight: var(--display-title-fw);
+  color: #495E57;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 .bookingForm-container{
   display: grid;
-  max-width: 200px;
-  gap: 20px;
+  max-width: 350px;
+  margin: auto;
+  color: #495E57;
+}
+
+.bookingForm-container input{
+  margin-bottom: 15px;
+  height: 25px;
+}
+
+.cols-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.cols-container input,
+.cols-container select{
+  width: 100%;
+}
+.cols-container select{
+  height: 30px;
+}
+
+.checkBox-container{
+  margin-bottom: 20px;
+}
+.checkBox-container input{
+  height: auto;
+  margin: 0 10px 0 0;
+}
+
+.booking-btn:disabled{
+  background-color: rgb(174, 173, 173);
+  border-color: rgb(189, 189, 189);
+  color: rgb(89, 88, 88);
+}
+.booking-btn{
+  background-color: #26831a;
+  border-color: #216f17;
+  color: #EDEFEE;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 
