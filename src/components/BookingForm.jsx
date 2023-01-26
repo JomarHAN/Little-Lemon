@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { fetchAPI, submitAPI } from '../dateData'
 
-function BookingForm({availableTimes, dispatchUpdateTimes}) {
+function BookingForm({availableTimes, dispatchAvailableTimes, submitForm}) {
   const [pickedDate, setPickedDate] = useState()
   const [pickedTime, setPickedTime] = useState()
   const [guests, setGuests] = useState()
@@ -9,9 +8,14 @@ function BookingForm({availableTimes, dispatchUpdateTimes}) {
 
   useEffect(() => {
     if(pickedDate !== undefined){
-      dispatchUpdateTimes({type: 'updating times',payload: pickedDate})
+      dispatchAvailableTimes({type: 'updating times',payload: pickedDate})
     }
-  },[pickedDate, dispatchUpdateTimes])
+  },[pickedDate, dispatchAvailableTimes])
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    submitForm({pickedDate, pickedTime, guests, occasion});
+  }
 
   return (
       <form className='bookingForm-container'>
@@ -20,7 +24,7 @@ function BookingForm({availableTimes, dispatchUpdateTimes}) {
         <label htmlFor="res-time">Choose time</label>
         <select id="res-time" name='pickedTime' value={pickedTime} onChange={(e) => setPickedTime(e.target.value)}>
           <option value={undefined} >--:--</option>
-          {availableTimes.length !== 0
+          {availableTimes?.length !== 0
             && availableTimes.map(time => (
               <option key={time} value={time} >{time}</option>
             ))
@@ -34,7 +38,7 @@ function BookingForm({availableTimes, dispatchUpdateTimes}) {
             <option value='Birthday'>Birthday</option>
             <option value='Anniversary'>Anniversary</option>
         </select>
-        <button type='submit'>Book Now</button>
+        <button type='submit' onClick={handleSubmit}>Book Now</button>
       </form>
   )
 }
