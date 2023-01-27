@@ -452,10 +452,15 @@ main{
   height: 25px;
 }
 
+.col-left input{
+  margin-bottom: 0;
+}
+
 .cols-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  margin-bottom: 15px;
 }
 .cols-container input,
 .cols-container select{
